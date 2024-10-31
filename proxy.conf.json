@@ -1,0 +1,9 @@
+{
+    "/contact": {
+      "target": "https://muhammadshamoonhussain.github.io/json/db.json",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }
+  
