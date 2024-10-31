@@ -9,7 +9,7 @@ export class ApiService {
   // Set your base URL for laptop and mobile
   private baseUrl: string = window.location.hostname === 'localhost' ? 
                               'http://localhost:3000' : 
-                              'https://e-cart-five-phi.vercel.app/?vercelToolbarCode=G4KKHJmYuHuamPz'; // Change to your local IP
+                              ''; // Change to your local IP
 
   constructor(private http: HttpClient) {}
 
