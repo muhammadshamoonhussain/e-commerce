@@ -26,9 +26,7 @@
             "outputPath": "dist/cart",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
@@ -45,29 +43,23 @@
           "configurations": {
             "production": {
               "optimization": true,
-    "outputHashing": "all",
-    "sourceMap": false,
-    "extractCss": true,
-    "namedChunks": false,
-    "aot": true,
-    "extractLicenses": true,
-    "vendorChunk": false,
-    "buildOptimizer": true,
-           "budgets": [
-  {
-    "type": "initial",
-    "maximumWarning": "600kb",
-    "maximumError": "800kb"    
-  },
-  {
-    "type": "allScript",
-    "maximumWarning": "400kb",
-    "maximumError": "500kb"
-  }
-],
-
-
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "600kb",
+                  "maximumError": "800kb"
+                },
+                {
+                  "type": "allScript",
+                  "maximumWarning": "400kb",
+                  "maximumError": "500kb"
+                }
+              ]
             },
             "development": {
               "optimization": false,

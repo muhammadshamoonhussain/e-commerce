@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, map, Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -23,9 +23,12 @@ export class CartapiService {
   }
 
   // Get the cart data as an observable
-  getproduct() {
+  getproduct(){
     return this.product.asObservable();
   }
+
+
+
 
   // Add a product to the cart and save it to localStorage
   addtocart(pro: any) {
@@ -42,6 +45,9 @@ export class CartapiService {
         total += price
     });
     return total;
+  }
+  saveData(data: any) {
+    return this.http.post('/assets/db.json', data);
   }
 
   // Remove a product from the cart and update localStorage
