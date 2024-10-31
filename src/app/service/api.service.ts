@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class ApiService {
   // Set your base URL for laptop and mobile
   private baseUrl: string = window.location.hostname === 'localhost' ? 
-                              'http://localhost:3000' : 
+                              'http://localhost:3000/api' : 
                               ''; // Change to your local IP
 
   constructor(private http: HttpClient) {}
